@@ -1,0 +1,25 @@
+<%= form_for(@admin_banner) do |f| %>
+  <% if @admin_banner.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@admin_banner.errors.count, "error") %> prohibited this admin_banner from being saved:</h2>
+
+      <ul>
+      <% @admin_banner.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :active %><br>
+    <%= f.check_box :active %>
+  </div>
+  <div class="field">
+    <%= f.label :banner %><br>
+    <%= f.text_area :banner %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

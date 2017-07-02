@@ -1,5 +1,7 @@
 // A stylesheet for overriding bootstrap defaults
-
+.panel-default > .panel-heading {
+  background: yellow;
+}
 .panel {
   word-wrap: break-word;
 }

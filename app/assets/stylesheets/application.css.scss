@@ -29,6 +29,8 @@ $table-bg-accent: #E8E8E8;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "bootstrap3-switch.css.scss";
+@import "bootstrap_custom.css.scss";
+
 
 .alert {
   margin-bottom: 0px;
@@ -458,7 +460,7 @@ body {
   .navbar-collapse.in {
     background-color: #113;
   }
-} 
+}
 
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
   background-color: #113;

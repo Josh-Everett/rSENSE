@@ -1,0 +1,27 @@
+<h1>Listing admin_banners</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Active</th>
+      <th>Banner</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_banners.each do |admin_banner| %>
+      <tr>
+        <td><%= admin_banner.active %></td>
+        <td><%= admin_banner.banner %></td>
+        <td><%= link_to 'Show', admin_banner %></td>
+        <td><%= link_to 'Edit', edit_admin_banner_path(admin_banner) %></td>
+        <td><%= link_to 'Destroy', admin_banner, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Admin banner', new_admin_banner_path %>

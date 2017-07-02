@@ -17,7 +17,7 @@
   </head>
 
   <body data-page-name="<%= params[:controller] %>/<%= params[:action] %>">
-  
+
     <!-- The title bar -->
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container"><!-- Brand and toggle get grouped for better mobile display -->
@@ -40,6 +40,7 @@
             <li class="navbtn" title="Check out the latest iSENSE news and updates"><%=link_to news_index_path do %><i class='fa fa-book'></i> News<%end%></li>
             <% if is_admin? %>
             <li class="navbtn"><%= link_to users_path do%><i class="fa fa-users"></i> Users<%end%></li>
+            <li class="navbtn"><%= link_to admin_banners_path do%><i class="fa fa-users"></i>Banner<%end%></li>
             <% end %>
           </ul>
           <ul class="nav navbar-nav navbar-right">
@@ -68,6 +69,10 @@
         </div><!-- /.navbar-collapse -->
       </div>
     </nav>
+
+
+    
+
 
     <!-- Main Container -->
     <div id="outer" class="<%= params[:controller] %>-controller <%= params[:action] %>-action">
