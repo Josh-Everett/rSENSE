@@ -2,6 +2,7 @@ Rsense::Application.routes.draw do
   resources :admin_banners
 
   get 'admin_banners', to: 'admin_banners#index'
+  get 'admin_banners/:id', to: 'admin_banners#show'
 
 
   devise_for :users, controllers: { omniauth_callbacks: 'omniauth_callbacks', registrations: 'registrations', passwords: 'passwords', confirmations: 'confirmations' }

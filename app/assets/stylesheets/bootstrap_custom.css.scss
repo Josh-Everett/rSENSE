@@ -1,7 +1,13 @@
 // A stylesheet for overriding bootstrap defaults
 .panel-default > .panel-heading {
   background: yellow;
+  text-align: center;
+  font-weight: 900;
+}
+.panel-default > .panel-body {
+  text-align: center;
 }
 .panel {
+  border-width: thick;
   word-wrap: break-word;
 }
