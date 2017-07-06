@@ -8,20 +8,11 @@ class AdminBannersController < ApplicationController
   def index
     @admin_banners = AdminBanner.all
     redirect_to "/admin_banners/new"
-    #respond_with(@admin_banners)
   end
-
-#  def show
- #   @admin_banner = AdminBanner.find(params[:id])
- #  respond_with(@admin_banner)
- # end
 
   def new
     @admin_banner = AdminBanner.new
     respond_with(@admin_banner)
-  end
-
-  def edit
   end
 
   def create
