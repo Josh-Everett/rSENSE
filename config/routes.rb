@@ -1,7 +1,7 @@
 Rsense::Application.routes.draw do
   resources :admin_banners
 
-  get 'admin_banners', to: 'admin_banners#index'
+  get 'admin_banners', to: 'admin_banners#create'
   get 'admin_banners/:id', to: 'admin_banners#show'
 
 
