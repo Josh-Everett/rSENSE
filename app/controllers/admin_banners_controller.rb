@@ -11,10 +11,10 @@ class AdminBannersController < ApplicationController
     #respond_with(@admin_banners)
   end
 
-  def show
-    @admin_banner = AdminBanner.find(params[:id])
-    respond_with(@admin_banner)
-  end
+#  def show
+ #   @admin_banner = AdminBanner.find(params[:id])
+ #  respond_with(@admin_banner)
+ # end
 
   def new
     @admin_banner = AdminBanner.new
