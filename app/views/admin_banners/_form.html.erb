@@ -13,11 +13,15 @@
 
   <div class="field">
     <%= f.label :active %><br>
-    <%= f.check_box :active, :checked => AdminBanner.last.active %>
+    <%= f.check_box :active, :checked => if AdminBanner.exists? then AdminBanner.last.active end %>
   </div>
   <div class="field">
     <%= f.label :banner %><br>
-    <%= f.text_area :banner, :value => AdminBanner.last.banner, cols: 80, rows: 5 %>
+    <%= f.text_area :banner, :value =>if AdminBanner.exists? then AdminBanner.last.banner end, cols: 80, rows: 5 %>
+  </div>
+  <div class="field">
+  <%= f.label :style %><br>
+  <%= f.collection_select :stylechoice, AdminBanner::STYLES, :to_s, :to_s, :include_blank => true %>
   </div>
   <div class="actions">
     <%= f.submit %>

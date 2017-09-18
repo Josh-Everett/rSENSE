@@ -11,11 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170629173318) do
+ActiveRecord::Schema.define(version: 20170629180527) do
 
   create_table "admin_banners", force: true do |t|
     t.boolean  "active"
     t.text     "banner"
+    t.text     "stylechoice"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

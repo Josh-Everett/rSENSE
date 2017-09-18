@@ -7,12 +7,12 @@
 
 
 <!-- start announcement banner -->
-  <%if AdminBanner.last.active %>
-  <div class="alert fade in alert-danger">
-    <button class="close" data-dismiss="alert">×</button>
-    <%= AdminBanner.last.banner %>
-  </div>
-  <% end %>
+  <%if AdminBanner.exists? && AdminBanner.last.active %>
+      <div class="alert fade in alert-danger">
+        <button class="close" data-dismiss="alert">×</button>
+        <%= AdminBanner.last.banner %>
+      </div>
+      <% end %>
 <!-- end admin banner -->
 
 
