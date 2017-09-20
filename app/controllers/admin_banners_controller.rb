@@ -37,6 +37,6 @@ class AdminBannersController < ApplicationController
     end
 
     def admin_banner_params
-      params.require(:admin_banner).permit(:active, :banner)
+      params.require(:admin_banner).permit(:active, :banner, :stylechoice)
     end
 end

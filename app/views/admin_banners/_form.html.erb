@@ -21,7 +21,7 @@
   </div>
   <div class="field">
   <%= f.label :style %><br>
-  <%= f.collection_select :stylechoice, AdminBanner::STYLES, :to_s, :to_s, :include_blank => true %>
+  <%= f.collection_select :stylechoice, AdminBanner::STYLES, :to_s, :to_s, :include_blank => false %>
   </div>
   <div class="actions">
     <%= f.submit %>
